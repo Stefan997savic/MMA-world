@@ -14,13 +14,20 @@
 
         public Country Country { get; set; }
 
-        public Host(int id, string name, string iSO2, string iSO3, string nameSRB, Country country)
+        public Host(int id, 
+            string name,
+            string iSO2,
+            string iSO3,
+            string nameSRB, 
+            int attendecy,
+            int capacity,
+            Country country)
         {
             HostId = id;
             Arena = nameSRB;
             City = nameSRB;
-            Attendance = 0;
-            Capacity = 0;
+            Attendance = attendecy;
+            Capacity = capacity;
             Country = country;
         }
     }
