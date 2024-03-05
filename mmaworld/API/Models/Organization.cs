@@ -12,13 +12,16 @@ namespace API.Models
         public string ShortName {  get; set; }
 
         public Country Country { get; set; }
+        public List<Event> Events { get; set; }
 
-        public Organization(int id, string name,string shortName, Country country)
+
+        public Organization(int id, string name,string shortName, Country country,List<Event> events)
         {
             OrgID = id;
             OrgName = name;
             ShortName = shortName;
             Country = country;
+            Events = new List<Event>();
             
 
 
