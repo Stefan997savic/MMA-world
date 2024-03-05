@@ -3,7 +3,7 @@
 namespace API.Models
 {
     //TODO do same for Country as it is at host 
-    public class Organization: Country
+    public class Organization
     {
        
 
@@ -11,11 +11,15 @@ namespace API.Models
         public string OrgName {  get; set; } 
         public string ShortName {  get; set; }
 
-        public Organization(int id, string name, string iSO2, string iSO3, string nameSRB) : base(id, name, iSO2, iSO3, nameSRB)
+        public Country Country { get; set; }
+
+        public Organization(int id, string name,string shortName, Country country)
         {
-            OrgID = id; 
-            OrgName = name; 
-            ShortName = iSO2;
+            OrgID = id;
+            OrgName = name;
+            ShortName = shortName;
+            Country = country;
+            
 
 
         }
