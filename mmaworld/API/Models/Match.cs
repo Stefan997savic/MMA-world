@@ -15,7 +15,13 @@
 
         public TimeSpan TimeElapsed { get; set; }
 
-        public Match(int id, Fighter blueFigter, Fighter redFighter, Referee referee, Fighter winner, ScoreType scoreType, TimeSpan timeElapsed)
+        public Match(int id, 
+                    Fighter blueFigter, 
+                    Fighter redFighter, 
+                    Referee referee, 
+                    Fighter winner, 
+                    ScoreType scoreType, 
+                    TimeSpan timeElapsed)
         {
             Id = id;
             BlueFigter = blueFigter;

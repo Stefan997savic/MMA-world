@@ -15,13 +15,13 @@
         public Country Country { get; set; }
 
         public Host(int id, 
-            string name,
-            string iSO2,
-            string iSO3,
-            string nameSRB, 
-            int attendecy,
-            int capacity,
-            Country country)
+                    string name,
+                    string iSO2,
+                    string iSO3,
+                    string nameSRB, 
+                    int attendecy,
+                    int capacity,
+                    Country country)
         {
             HostId = id;
             Arena = nameSRB;

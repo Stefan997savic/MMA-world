@@ -15,7 +15,12 @@
 
 
 
-        public Person(int id, string name, int dateOfBirth, int height, Country origin, Country placeOfBirth)
+        public Person(int id, 
+                        string name, 
+                        int dateOfBirth, 
+                        int height, 
+                        Country origin, 
+                        Country placeOfBirth)
         {
             Id = id;
             Name = name;

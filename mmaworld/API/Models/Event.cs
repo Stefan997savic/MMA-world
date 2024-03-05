@@ -12,6 +12,13 @@
             Id = id;
             Name = name;
             Host = host;
+            Matches = matches;
+        }
+        public Event(int id, string name, Host host)
+        {
+            Id = id;
+            Name = name;
+            Host = host;
             Matches = new List<Match>();
         }
     }
