@@ -1,4 +1,4 @@
-﻿namespace API.Models
+﻿namespace Domain.Models
 {
     public class Event
     {
@@ -20,6 +20,10 @@
             Name = name;
             Host = host;
             Matches = new List<Match>();
+        }
+        public override string ToString()
+        {
+            return $"{Name} [{Host}]";
         }
     }
 }

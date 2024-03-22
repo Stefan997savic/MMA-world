@@ -1,4 +1,4 @@
-﻿namespace API.Models
+﻿namespace Domain.Models
 {
     public class Fighter: Person
     { 
@@ -18,6 +18,11 @@
         {
             NickName = nick;
             Record = record;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} {NickName}";
         }
     }
 }

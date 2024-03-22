@@ -1,4 +1,4 @@
-﻿namespace API.Models
+﻿namespace Domain.Models
 {
     public class ScoreType
     {
@@ -12,6 +12,11 @@
         {
             Id = id;
             Name = name;
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

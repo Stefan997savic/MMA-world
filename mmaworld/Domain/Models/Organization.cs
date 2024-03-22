@@ -1,6 +1,6 @@
 ﻿using System.Xml.Linq;
 
-namespace API.Models
+namespace Domain.Models
 {
     //TODO do same for Country as it is at host 
     public class Organization
@@ -34,6 +34,11 @@ namespace API.Models
             ShortName = shortName;
             Country = country;
             Events = new List<Event>();
+        }
+
+        public override string ToString()
+        {
+            return OrgName;
         }
 
     }

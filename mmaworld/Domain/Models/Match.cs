@@ -1,4 +1,4 @@
-﻿namespace API.Models
+﻿namespace Domain.Models
 {
     public class Match
     {
@@ -30,6 +30,16 @@
             Winner = winner;
             ScoreType = scoreType;
             TimeElapsed = timeElapsed;
+        }
+
+        public override string ToString()
+        {
+            return $"{BlueFigter} - {RedFighter} - {Winner}";
+        }
+
+        public string GetResult()
+        {
+            return "TODO";
         }
     }
 }

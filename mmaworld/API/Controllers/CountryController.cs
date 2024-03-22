@@ -1,4 +1,4 @@
-﻿using API.Models;
+﻿using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -8,22 +8,23 @@ namespace API.Controllers
         private readonly ILogger<CountryController> _logger;
         private readonly List<Country> _countries;
 
-        public CountryController(ILogger<CountryController> logger)
+        public CountryController(ILogger<CountryController> logger,
+            List<Country> countries)
         {
             _logger = logger;
-            _countries = new List<Country>(); // Example: You might replace this with actual data access layer.
+            _countries = countries; // Example: You might replace this with actual data access layer.
         }
 
-        // GET: api/country
-        [HttpGet]
-        public ActionResult<IEnumerable<Country>> GetCountries()
+        // GET: api/country/all
+        [HttpGet("all")]
+        public IActionResult GetCountries()
         {
             return Ok(_countries);
         }
 
         // GET: api/country/5
         [HttpGet("{id}")]
-        public ActionResult<Country> GetCountry(int id)
+        public IActionResult GetCountry(int id)
         {
             var country = _countries.Find(c => c.Id == id);
             if (country == null)
@@ -34,13 +35,13 @@ namespace API.Controllers
         }
 
         // POST: api/country
-        [HttpPost]
-        public ActionResult<Country> CreateCountry(Country country)
+        [HttpPost("insert")]
+        public IActionResult CreateCountry(Country country)
         {
             // Example: You might add validation and actual data insertion logic here.
             country.Id = _countries.Count + 1;
             _countries.Add(country);
-            return CreatedAtAction(nameof(GetCountry), new { id = country.Id }, country);
+            return Ok(country);
         }
 
         // PUT: api/country/5

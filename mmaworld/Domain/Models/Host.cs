@@ -1,4 +1,4 @@
-﻿namespace API.Models
+﻿namespace Domain.Models
 {
     public class Host
     {
@@ -29,6 +29,15 @@
             Attendance = attendecy;
             Capacity = capacity;
             Country = country;
+        }
+        public override string ToString()
+        {
+            return $"{Arena}-{City}";
+        }
+
+        public string GetArenaDetails()
+        {
+            return $"{Arena}-[{Attendance}/{Capacity}]";
         }
     }
 }

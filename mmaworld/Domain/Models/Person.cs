@@ -1,4 +1,4 @@
-﻿namespace API.Models
+﻿namespace Domain.Models
 {
     public class Person
     {
@@ -29,5 +29,16 @@
             Origin = origin;
             PlaceOfBirth = placeOfBirth;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+
+        string GetPhisicalDetails()
+        {
+            return "TODO";
+        }
     }
 }
+
