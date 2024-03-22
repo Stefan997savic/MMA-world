@@ -24,6 +24,7 @@ namespace API.Models
             Events = events;
         }
 
+       
         public Organization(int id,
                            string name,
                            string shortName,
