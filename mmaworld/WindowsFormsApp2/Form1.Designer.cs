@@ -112,6 +112,7 @@
             this.txtISO2.Name = "txtISO2";
             this.txtISO2.Size = new System.Drawing.Size(100, 20);
             this.txtISO2.TabIndex = 8;
+            this.txtISO2.TextChanged += new System.EventHandler(this.txtISO2_TextChanged);
             // 
             // txtISO3
             // 
@@ -119,6 +120,7 @@
             this.txtISO3.Name = "txtISO3";
             this.txtISO3.Size = new System.Drawing.Size(100, 20);
             this.txtISO3.TabIndex = 9;
+            this.txtISO3.TextChanged += new System.EventHandler(this.txtISO3_TextChanged);
             // 
             // txtNameSrb
             // 

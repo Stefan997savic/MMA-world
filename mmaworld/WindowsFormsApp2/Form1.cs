@@ -102,7 +102,10 @@ namespace WindowsFormsApp2
                     selectCountry.Name = newName;
                     addList();
                 }
+                
+
             }
+            
            
             
         }
@@ -131,6 +134,25 @@ namespace WindowsFormsApp2
                 prompt.AcceptButton = confirmation;
 
                 return prompt.ShowDialog() == DialogResult.OK ? textBox.Text : "";
+            }
+        }
+
+        //ogranicava unos na dva karaktera za ISO2
+        private void txtISO2_TextChanged(object sender, EventArgs e)
+        {
+            if(txtISO2.Text.Length > 2) {
+                MessageBox.Show("Molim vas unesite dva slova");
+                txtISO2.Text = txtISO2.Text.Substring(0, 2);
+            }
+        }
+
+        //Ogranicava unos na tri karaktera za ISO3
+        private void txtISO3_TextChanged(object sender, EventArgs e)
+        {
+            if(txtISO3.Text.Length >3)
+            {
+                MessageBox.Show("Molim vas unesite tri slova");
+                txtISO3.Text = txtISO3.Text.Substring(0, 3);
             }
         }
     }
