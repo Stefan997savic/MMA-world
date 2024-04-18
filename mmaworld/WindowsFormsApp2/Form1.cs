@@ -169,7 +169,7 @@ namespace WindowsFormsApp2
                 //Proverava da li datoteka postoji i ako postoji upisuje listu 
                 if (File.Exists(country))
                 {
-                    using (StreamWriter sw = new StreamWriter(country))
+                    using (StreamWriter sw = new StreamWriter(country, append: true))
                     {
                        
                         foreach (var zemlje in countryList)
