@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,9 @@ namespace WindowsFormsApp2
             addList();
 
             
+
+
+
             txtName.Text = "";
             txtNameSrb.Text = "";
             txtISO2.Text = "";
@@ -155,5 +159,41 @@ namespace WindowsFormsApp2
                 txtISO3.Text = txtISO3.Text.Substring(0, 3);
             }
         }
+
+        //Upis teksta u datoteku
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String country = "Zemlje";
+                //Proverava da li datoteka postoji i ako postoji upisuje listu 
+                if (File.Exists(country))
+                {
+                    using (StreamWriter sw = new StreamWriter(country))
+                    {
+                       
+                        foreach (var zemlje in countryList)
+                        {
+                            sw.WriteLine(zemlje);
+                        }
+                    }
+                }
+                else
+                {
+                    //ako datoteka ne postoji kreira novu
+                    using (StreamWriter sw = File.CreateText(country))
+                    {
+                        MessageBox.Show("Datoteka je uspesno kreirana");
+                    }
+                    
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greska: " + ex.Message);
+            }
+        }
+        
     }
 }
