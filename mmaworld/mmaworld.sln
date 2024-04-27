@@ -10,11 +10,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{51147F28-D864-4089-BD8D-91F506B44930}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{050F7C30-209D-4999-B579-56911B22C9C3}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2", "WindowsFormsApp2\WindowsFormsApp2.csproj", "{83C942EE-E29C-4DBA-84B1-786566CC282C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinApp", "WindowsFormsApp2\WinApp.csproj", "{83C942EE-E29C-4DBA-84B1-786566CC282C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-using API.Models;
+using Domain.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
